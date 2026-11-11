@@ -1,0 +1,19 @@
+apiVersion: networking.k3s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: isolate-v2x-telemetry
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: v2x-telemetry-gateway
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: internal-broker-proxy
+    ports:
+    - protocol: TCP
+      port: 8085
