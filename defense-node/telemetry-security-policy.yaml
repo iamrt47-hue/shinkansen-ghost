@@ -1,3 +1,15 @@
+# ==============================================================================
+# SHINKANSEN-GHOST: V2X TELEMETRY SECURITY POLICY
+# 新幹線ゴースト：V2Xテレメトリ・セキュリティポリシー
+# ==============================================================================
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: v2x-telemetry-security-policy
+  annotations:
+    description-en: "Enforces strict microservice segmentation for V2X telemetry"
+    description-jp: "V2Xテレメトリのマイクロサービスセグメンテーションを厳格に適用する"
+
 apiVersion: networking.k3s.io/v1
 kind: NetworkPolicy
 metadata:

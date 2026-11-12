@@ -1,3 +1,6 @@
+echo "[EN] Starting Shinkansen-Ghost Kubernetes Enumeration..."
+echo "[JP] 新幹線ゴースト Kubernetes 列挙スキャンを開始中..."
+
 #!/bin/bash
 # We forge a custom JWT payload with "role": "admin" and swap the header to use "alg": "none"
 # Header: {"alg":"none","typ":"JWT"} -> eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0
